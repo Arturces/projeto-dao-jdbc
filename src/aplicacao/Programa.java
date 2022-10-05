@@ -21,13 +21,13 @@ public class Programa {
         System.out.println("\n=== TESTE 2: Procurar vendedor pelo DEPARTAMENTO ===");
         Departamento departamento = new Departamento(2, null);
         List<Vendedor> list = vendedorDao.procurarPorDepartamento(departamento);
-        for (Vendedor obj : list){
+        for (Vendedor obj : list) {
             System.out.println(obj);
         }
 
         System.out.println("\n=== TESTE 3: Procurar todos os vendedores ===");
         list = vendedorDao.procurarTodos();
-        for (Vendedor obj : list){
+        for (Vendedor obj : list) {
             System.out.println(obj);
         }
 
@@ -35,6 +35,13 @@ public class Programa {
         Vendedor novoVendedor = new Vendedor(null, "Rafa", "rafa@gmail.com", new Date(), 4000.0, departamento);
         vendedorDao.insert(novoVendedor);
         System.out.println("Inserido! Novo id = " + novoVendedor.getId());
+
+
+        System.out.println("\n=== TESTE 5: Atualizar vendedores ===");
+        vendedor = vendedorDao.procurarId(1);
+        vendedor.setNome("Jogador numero 1");
+        vendedorDao.update(vendedor);
+        System.out.println("Atualização completa!");
 
         }
 
