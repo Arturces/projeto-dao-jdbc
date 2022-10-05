@@ -10,6 +10,6 @@ public interface VendedorDao {
     void update(Vendedor obj);
     void deletarId(Integer id);
     Vendedor procurarId(Integer id);
-    List<Vendedor> procurarTodo();
-    List<Vendedor> procrarPorDepartamento(Departamento departamento);
+    List<Vendedor> procurarTodos();
+    List<Vendedor> procurarPorDepartamento(Departamento departamento);
 }

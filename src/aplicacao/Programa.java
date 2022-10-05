@@ -19,7 +19,13 @@ public class Programa {
 
         System.out.println("\n=== TESTE 2: Procurar vendedor pelo DEPARTAMENTO ===");
         Departamento departamento = new Departamento(2, null);
-        List<Vendedor> list = vendedorDao.procrarPorDepartamento(departamento);
+        List<Vendedor> list = vendedorDao.procurarPorDepartamento(departamento);
+        for (Vendedor obj : list){
+            System.out.println(obj);
+        }
+
+        System.out.println("\n=== TESTE 3: Procurar tos os vendedores ===");
+        list = vendedorDao.procurarTodos();
         for (Vendedor obj : list){
             System.out.println(obj);
         }
