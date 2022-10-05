@@ -8,6 +8,7 @@ public class Departamento implements Serializable {
 
     @Serial
     private static final long serialVersionUID = 2774844219605409087L;
+
     private Integer id;
     private String nome;
 
